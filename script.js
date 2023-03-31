@@ -14,24 +14,23 @@ var lowerChars = "abcdefghijklmnopqrstuvwxyz".split("");
 var upperChars = "ABCDEFGHIJKLMNOPQRSTUVWXYZ".split("");
 var specialChars = "!@#$%^&*()_+~`|}{[]:;?><,./-=".split("");
 var numberChars = "0123456789".split("");
-var passwordCharss = [lowerChars];
+var passwordChars = [upperChars, specialChars, numberChars];
 // var passwordChars = [];
 // var password = "";
 
 //* todo: remove after testing
-console.log(upperChars);
-console.log(lowerChars);
-console.log(specialChars);
-console.log(numberChars);
-console.log(passwordCharss);
+// console.log(lowerChars);
+// console.log(upperChars);
+// console.log(specialChars);
+// console.log(numberChars);
+console.log(passwordChars);
 
 // Write password to the #password input
-function writePassword() {
-  var password = generatePassword();
-  var passwordText = document.querySelector("#password");
-  passwordText.value = password;
-  console.log(password);
-}
+// function writePassword() {
+//   var password = generatePassword();
+//   var passwordText = document.querySelector("#password");
+//   passwordText.value = password;
+//   console.log("password");
 
 function getInput() {
   passwordLength = prompt("How many charactors?");
@@ -49,6 +48,14 @@ function getInput() {
     passwordChars.push(lowerChars);
     console.log(passwordChars);
   }
+  upperCase = confirm(
+    "Do you want to include upper case? Click cancel for no."
+  );
+  if (upperCase) {
+    passwordChars.push(upperChars);
+    console.log(passwordChars);
+  }
+
   // TODO: add the cancel option for the other options below
   // and also add an if statement for each option
   upperCase = confirm("Do you want to include upper case?");
