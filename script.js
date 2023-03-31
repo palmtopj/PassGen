@@ -74,7 +74,7 @@ function getInput() {
   // upperCase = confirm("Do you want to include upper case?");
   // special = confirm("Do you want to include special charactors?");
   // numbers = confirm("Do you want to include numbers?");
-  console.log(passwordLength, lowerCase, upperCase, numbers, special);
+  console.log(passwordLength, lowerCase, upperCase, special);
 
   // TODO: Call the function that will build the password
 }
