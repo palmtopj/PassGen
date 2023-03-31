@@ -8,9 +8,21 @@ var numbers = "";
 var passwordChar = "";
 var password = "";
 
-// TODO: Remove these arrays from passwordChars and fill out with chars
 passwordChars = [["A"], ["@"], ["3"]];
-var lowerChars = ["a"];
+var lowerChars = "abcdefghijklmnopqrstuvwxyz".split("");
+var upperChars = "ABCDEFGHIJKLMNOPQRSTUVWXYZ".split("");
+var specialChars = "!@#$%^&*()_+~`|}{[]:;?><,./-=".split("");
+var numberChars = "0123456789".split("");
+var passwordChars = [];
+var password = "";
+
+//* todo: remove after testing
+console.log(upperChars);
+console.log(lowerChars);
+console.log(specialChars);
+console.log(numberChars);
+// console.log(passwordChars);
+// console.log(password);
 
 // Write password to the #password input
 function writePassword() {
