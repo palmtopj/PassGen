@@ -8,11 +8,13 @@ var numbers = "";
 var passwordChar = "";
 var password = "";
 
-var passwordChars = [];
+// var passwordChars = [["A"], ["@"], ["3"]];
+
 var lowerChars = "abcdefghijklmnopqrstuvwxyz".split("");
 var upperChars = "ABCDEFGHIJKLMNOPQRSTUVWXYZ".split("");
 var specialChars = "!@#$%^&*()_+~`|}{[]:;?><,./-=".split("");
 var numberChars = "0123456789".split("");
+var passwordCharss = [lowerChars];
 // var passwordChars = [];
 // var password = "";
 
@@ -21,7 +23,7 @@ console.log(upperChars);
 console.log(lowerChars);
 console.log(specialChars);
 console.log(numberChars);
-// console.log(passwordChars);
+console.log(passwordCharss);
 
 // Write password to the #password input
 function writePassword() {
@@ -44,23 +46,14 @@ function getInput() {
     "Do you want to include lower case? Click cancel for no."
   );
   if (lowerCase) {
-    console.log([passwordChars]);
-    console.log(inside);
     passwordChars.push(lowerChars);
-    return null;
+    console.log(passwordChars);
   }
-
-  console.log([passwordChars]);
-  console.log(outside);
   // TODO: add the cancel option for the other options below
   // and also add an if statement for each option
-  upperCase = confirm(
-    "Do you want to include upper case? Click cancel for no."
-  );
-  special = confirm(
-    "Do you want to include special charactors? Click cancel for no."
-  );
-  numbers = confirm("Do you want to include numbers? Click cancel for no.");
+  upperCase = confirm("Do you want to include upper case?");
+  special = confirm("Do you want to include special charactors?");
+  numbers = confirm("Do you want to include numbers?");
   console.log(passwordLength, lowerCase, upperCase, numbers, special);
 
   // TODO: Call the function that will build the password
@@ -68,9 +61,9 @@ function getInput() {
 
 // TODO: Create a function for this to live in
 // TODO: Create a for loop that runs as many times as the password length
-var randomIndex = Math.floor(Math.random() * passwordChars.length);
-var randomCharIndex = Math.floor(Math.random() * passwordChars[randomIndex]);
-var randomChar = passwordChars[randomIndex][randomCharIndex];
+// var randomIndex = Math.floor(Math.random() * passwordChars.length);
+// var randomCharIndex = Math.floor(Math.random() * passwordChars[randomIndex]);
+// var randomChar = passwordChars[randomIndex][randomCharIndex];
 
 // TODO: Write the password to the html
 // Add event listener to generate button
