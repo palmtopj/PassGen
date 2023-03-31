@@ -1,5 +1,8 @@
 # 03 JavaScript: Password Generator
 
+https://palmtopj.github.io/PassGen/
+![Currently running in Console only](./Assets/230330PassGenV1.jpg)
+
 Languages used html, CSS, JS
 
 ToDo:
