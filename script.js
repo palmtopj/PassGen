@@ -8,8 +8,6 @@ var numbers = "";
 var passwordChar = "";
 var password = "";
 
-// var passwordChars = [["A"], ["@"], ["3"]];
-
 var lowerChars = "abcdefghijklmnopqrstuvwxyz".split("");
 var upperChars = "ABCDEFGHIJKLMNOPQRSTUVWXYZ".split("");
 var specialChars = "!@#$%^&*()_+~`|}{[]:;?><,./-=".split("");
@@ -69,11 +67,6 @@ function getInput() {
   //   console.log(passwordChars);
   // }
 
-  // TODO: add the cancel option for the other options below
-  // and also add an if statement for each option
-  // upperCase = confirm("Do you want to include upper case?");
-  // special = confirm("Do you want to include special charactors?");
-  // numbers = confirm("Do you want to include numbers?");
   console.log(passwordLength, lowerCase, upperCase, special);
 
   // TODO: Call the function that will build the password
