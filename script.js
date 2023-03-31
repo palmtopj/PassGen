@@ -13,8 +13,9 @@ var password = "";
 var lowerChars = "abcdefghijklmnopqrstuvwxyz".split("");
 var upperChars = "ABCDEFGHIJKLMNOPQRSTUVWXYZ".split("");
 var specialChars = "!@#$%^&*()_+~`|}{[]:;?><,./-=".split("");
-var numberChars = "0123456789".split("");
-var passwordChars = [upperChars, specialChars, numberChars];
+// var numberChars = "0123456789".split("");
+// todo: convert numberChars to an array of numbers
+var passwordChars = [];
 // var passwordChars = [];
 // var password = "";
 
@@ -55,12 +56,24 @@ function getInput() {
     passwordChars.push(upperChars);
     console.log(passwordChars);
   }
+  special = confirm(
+    "Do you want to include special characters? Click cancel for no."
+  );
+  if (special) {
+    passwordChars.push(specialChars);
+    console.log(passwordChars);
+  }
+  // numbers = confirm("Do you want to include numbers? Click cancel for no.");
+  // if (numbers) {
+  //   passwordChars.push(numbers);
+  //   console.log(passwordChars);
+  // }
 
   // TODO: add the cancel option for the other options below
   // and also add an if statement for each option
-  upperCase = confirm("Do you want to include upper case?");
-  special = confirm("Do you want to include special charactors?");
-  numbers = confirm("Do you want to include numbers?");
+  // upperCase = confirm("Do you want to include upper case?");
+  // special = confirm("Do you want to include special charactors?");
+  // numbers = confirm("Do you want to include numbers?");
   console.log(passwordLength, lowerCase, upperCase, numbers, special);
 
   // TODO: Call the function that will build the password
